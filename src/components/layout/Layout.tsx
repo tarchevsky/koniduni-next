@@ -1,21 +1,9 @@
-import Header from '@/components/header/Header'
-import Footer from '@/components/footer/Footer'
-import { ReactNode } from 'react'
-import FadeIn from '@/components/fadeIn/FadeIn'
-import { LayoutProps } from '@/types'
+import Hero from '@/components/hero/Hero'
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = () => {
 	return (
 		<>
-			<FadeIn className='cont'>
-				<Header />
-			</FadeIn>
-
-			{children}
-
-			<FadeIn>
-				<Footer />
-			</FadeIn>
+			<Hero title='Cайт в разработке' />
 		</>
 	)
 }

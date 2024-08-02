@@ -39,9 +39,9 @@ export interface LayoutProps {
 
 export interface HeroProps {
 	title: string
-	src: string
+	src?: string
 	buttonText?: string
-	alt: string
+	alt?: string
 	subtitle?: string
 }
 
