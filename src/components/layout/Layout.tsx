@@ -1,11 +1,7 @@
-import Hero from '@/components/hero/Hero'
+import { LayoutProps } from '@/types'
 
-const Layout = () => {
-	return (
-		<>
-			<Hero title='Cайт в разработке' />
-		</>
-	)
+const Layout = ({ children }: LayoutProps) => {
+	return <>{children}</>
 }
 
 export default Layout
