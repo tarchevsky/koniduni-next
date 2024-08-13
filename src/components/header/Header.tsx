@@ -73,7 +73,7 @@ const Header = () => {
 					>
 						<Link
 							className='px-[10px] btn btn-ghost font-normal'
-							href='#contacts'
+							href='/contacts'
 						>
 							Контакты
 						</Link>
