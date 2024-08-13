@@ -12,6 +12,7 @@ const Hero = ({ title, buttonText, alt, subtitle, src }: HeroProps) => {
 					width={400}
 					height={300}
 					priority
+					unoptimized
 				/>
 				<div className='md:relative lg:ml-[-100px] z-10'>
 					<h1 className='text-5xl font-extrabold'>{title}</h1>

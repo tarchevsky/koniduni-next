@@ -41,6 +41,7 @@ export interface FigureProps {
 	link?: string
 	src: string
 	caption: string
+	unoptimized?: boolean
 }
 
 // TableProps

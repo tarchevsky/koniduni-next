@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FigureProps } from '@/types'
 
-const Figure = ({ link, src, caption }: FigureProps) => {
+const Figure = ({ link, src, caption, unoptimized }: FigureProps) => {
 	return (
 		<>
 			{link ? (
@@ -14,6 +14,7 @@ const Figure = ({ link, src, caption }: FigureProps) => {
 							width={800}
 							height={1200}
 							className='object-contain hover:brightness-90 transition-all ease-in-out'
+							unoptimized={unoptimized}
 						/>
 						<figcaption className='text-center'>{caption}</figcaption>
 					</figure>
@@ -26,6 +27,7 @@ const Figure = ({ link, src, caption }: FigureProps) => {
 						width={800}
 						height={1200}
 						className='object-contain hover:brightness-90 transition-all ease-in-out'
+						unoptimized={unoptimized}
 					/>
 					<figcaption className='text-center'>{caption}</figcaption>
 				</figure>
