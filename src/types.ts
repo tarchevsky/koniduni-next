@@ -31,8 +31,9 @@ export interface ButtonProps {
 export interface LayoutProps {
 	children: ReactNode
 	className?: string
+	role?: string
 	delay?: number
-	style?: string
+	style?: CSSProperties
 }
 
 // FigureProps

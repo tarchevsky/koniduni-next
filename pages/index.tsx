@@ -1,10 +1,11 @@
 import { NextPage } from 'next'
-import Accordion from '@/components/accordion/Accordion'
 import FadeIn from '@/components/fadeIn/FadeIn'
 import Meta from '@/components/meta/Meta'
 import Carousel from '@/components/carousel/Carousel'
 import Table from '@/components/table/Table'
 import tableData from '@/data/tables.json'
+
+const title = 'Главная'
 
 const HomePage: NextPage = () => {
 	return (
@@ -13,7 +14,7 @@ const HomePage: NextPage = () => {
 			<FadeIn className='cont'>
 				<Carousel />
 			</FadeIn>
-			<div
+			<FadeIn
 				role='tablist'
 				className='cont tabs tabs-bordered dark:bg-base overflow-x-auto'
 				style={{
@@ -55,7 +56,7 @@ const HomePage: NextPage = () => {
 				<div role='tabpanel' className='tab-content p-4'>
 					<Table data={tableData.events} />
 				</div>
-			</div>
+			</FadeIn>
 		</>
 	)
 }
