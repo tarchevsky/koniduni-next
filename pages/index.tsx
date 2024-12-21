@@ -2,8 +2,6 @@ import { NextPage } from 'next'
 import FadeIn from '@/components/fadeIn/FadeIn'
 import Meta from '@/components/meta/Meta'
 import Carousel from '@/components/carousel/Carousel'
-import Table from '@/components/table/Table'
-import tableData from '@/data/tables.json'
 
 const title = 'Главная'
 
@@ -14,48 +12,38 @@ const HomePage: NextPage = () => {
 			<FadeIn className='cont'>
 				<Carousel />
 			</FadeIn>
-			<FadeIn
-				role='tablist'
-				className='cont tabs tabs-bordered dark:bg-base overflow-x-auto'
-				style={{
-					gridTemplateColumns: '1fr 1fr 1fr'
-				}}
-			>
-				<input
-					type='radio'
-					name='my_tabs_1'
-					role='tab'
-					className='tab'
-					aria-label='Часовые занятия'
-					defaultChecked
-				/>
-				<div role='tabpanel' className='tab-content p-4'>
-					<div className='overflow-x-auto'>
-						<Table data={tableData.oneHour} />
-					</div>
-				</div>
-
-				<input
-					type='radio'
-					name='my_tabs_1'
-					role='tab'
-					className='tab'
-					aria-label='30-минутные занятия'
-				/>
-				<div role='tabpanel' className='tab-content p-4'>
-					<Table data={tableData.thirtyMinutes} />
-				</div>
-
-				<input
-					type='radio'
-					name='my_tabs_1'
-					role='tab'
-					className='tab'
-					aria-label='Мероприятия'
-				/>
-				<div role='tabpanel' className='tab-content p-4'>
-					<Table data={tableData.events} />
-				</div>
+			<FadeIn className='cont mb-16'>
+				<h2 className='text-4xl mb-8'>Наши цены</h2>
+				<p className='text-lg'>
+					Прогулки и занятия - будни 1400р час / выходные 1600р час
+				</p>
+				<p className='text-lg'>
+					Двухчасовые прогулки - будни 2800р час / выходные 3200р час
+				</p>
+				<p className='text-lg'>
+					Конкурная тренировка - будни 2100р час / выходные 2400р час
+				</p>
+				<p className='text-lg'>
+					Катание в санях с лошадью - 5000р (40 минут) - вместительность - 3
+					человека
+				</p>
+				<p className='text-lg'>
+					Катание на собачей упряжке 1500р с человека (круг 15 минут)
+				</p>
+				<p className='text-lg'>
+					Катание на собачей упряжке 1500р с человека (круг 15 минут)
+				</p>
+				<p className='text-lg'>
+					Выезд лошадей в санях или для съёмок, заказ упряжки собак на своё
+					мероприятие, выезд пони или контактного зоопарка от 15 - 20 т.р. с
+					доставкой<sup>*</sup>
+				</p>
+				<p className='mt-8'>
+					<sup>
+						*Стоимость обговаривается индивидуально ,цена зависит от количества
+						животных,времени и места проведения мероприятия.
+					</sup>
+				</p>
 			</FadeIn>
 		</>
 	)
